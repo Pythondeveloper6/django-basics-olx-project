@@ -1,0 +1,29 @@
+-------------------- Auto-Git Log --------------------
+		Mon May 11 2020 22:12:18 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/autogit.json
+* blog/__init__.py
+* blog/admin.py
+* blog/apps.py
+* blog/migrations/0001_initial.py
+* blog/migrations/0002_post_title2.py
+* blog/migrations/__init__.py
+* blog/models.py
+* blog/tests.py
+* blog/views.py
+* manage.py
+* project/__init__.py
+* project/settings.py
+* project/urls.py
+* project/wsgi.py
+
+
+Deleted files:
+
+
+Renamed files:
