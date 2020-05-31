@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Sun May 31 2020 21:05:22 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* blog/models.py
+* blog/templates/blog/all_posts.html
+* blog/urls.py
+* project/urls.py
+
+
+Created files:
+* blog/migrations/0005_post_author.py
+* "project/- how django works"
+
+
+Deleted files:
+
+
+Renamed files:

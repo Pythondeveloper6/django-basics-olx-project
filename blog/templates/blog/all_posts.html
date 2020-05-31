@@ -3,5 +3,5 @@
 
 
 {% for post in posts %}
-    <h3><a href="{% url 'blog:post_detail' post.id %}"> {{post}}</a></h3>
+    <h3><a href="{% url 'blog:post_detail' post.post_slug %}"> {{post}}</a></h3>
 {% endfor %}
