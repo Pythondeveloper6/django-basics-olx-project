@@ -1,0 +1,21 @@
+ - how django works
+ - design models
+ - design views , url 
+ - add static & media files 
+ - add templates
+
+
+
+
+ - models :
+    post : 
+        - title
+        - author
+        - createed_at
+        - content
+
+
+django relationships : [model : model]
+    -  one to many [foreignkey]   : user : many posts
+    - many to many : many user --- many groups
+    - one to one : user : profile
