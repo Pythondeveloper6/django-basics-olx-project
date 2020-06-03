@@ -12,10 +12,11 @@ ad :
 
 
 
-
 Features : 
     - search 
     - main category : sub category 
-    - apply on ad
+    - apply on ad [send on mail]
     - similar ads
-    - 
+    - contact
+    - user accounts 
+    - place ad

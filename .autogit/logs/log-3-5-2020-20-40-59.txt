@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jun 03 2020 20:40:59 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* blog/models.py
+* blog/views.py
+* project/settings.py
+* project/urls.py
+
+
+Created files:
+* blog/migrations/0007_post_image.py
+* blog/migrations/0008_post_active.py
+* media/post/django2.jpg
+* media/post/learn_oop.jpg
+* outline.md
+
+
+Deleted files:
+
+
+Renamed files:
