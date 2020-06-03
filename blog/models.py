@@ -18,6 +18,9 @@ class Post(models.Model): # db table
     content = models.TextField(max_length=1000)
     created_at =models.DateTimeField(default=timezone.now)
     post_slug = models.SlugField(blank=True, null=True)
+    image = models.ImageField(upload_to ='post/')
+    active = models.BooleanField(default=False)
+
 
 
     def save(self, *args, **kwargs): 

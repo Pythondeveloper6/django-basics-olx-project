@@ -4,7 +4,7 @@ from django.shortcuts import render
 from .models import Post
 
 def post_list(request):
-    all_posts = Post.objects.all()
+    all_posts = Post.objects.filter(active=True)
     return render(request,'blog/all_posts.html' ,{'posts':all_posts})
 
 
