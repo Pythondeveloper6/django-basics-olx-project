@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jun 03 2020 21:11:11 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* ad/admin.py
+* ad/models.py
+
+
+Created files:
+* ad/migrations/0001_initial.py
+* ad/migrations/0002_auto_20200603_2109.py
+
+
+Deleted files:
+
+
+Renamed files:
