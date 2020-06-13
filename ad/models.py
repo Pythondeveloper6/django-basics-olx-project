@@ -12,7 +12,7 @@ class Ad(models.Model):
     image = models.ImageField( upload_to='ad/')
     content = models.TextField(max_length=1000)
     price = models.IntegerField(default=1)
-    category = models.ForeignKey('Category', related_name='ad_category', on_delete=models.CASCADE)
+    category = models.ForeignKey('Category',limit_choices_to={'main_category':True},related_name='ad_category', on_delete=models.CASCADE)
 
     ### relation : main category 
 
@@ -37,7 +37,7 @@ class AdImages(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
-    main_category = models.ForeignKey('self', related_name='maincategory', on_delete=models.CASCADE , blank=True, null=True)
+    main_category = models.ForeignKey('self', limit_choices_to={'main_category':None},related_name='maincategory', on_delete=models.CASCADE , blank=True, null=True)
 
     ## relation sub category 
 
