@@ -1,1 +1,10 @@
 <h1> post ad</h1>
+
+
+
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="post add">
+</form>

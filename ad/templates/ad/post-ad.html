@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load bootstrap4 %}
+{% block body %}
+
+
+	
+	<div class="banner text-center">
+	  <div class="container">    
+			<h1>Sell or Advertise   <span class="segment-heading">    anything online </span> with Resale</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+			<a href="post-ad.html">Post Free Ad</a>
+	  </div>
+	</div>
+	<!-- Submit Ad -->
+	<div class="submit-ad main-grid-border">
+		<div class="container">
+			<h2 class="head">Post an Ad</h2>
+			<div class="post-ad-form">
+				<form method="POST" enctype="multipart/form-data">
+					{% csrf_token %}
+					{% bootstrap_form form %}
+					{% buttons %}
+					   <p class="post-terms">By clicking <strong>post Button</strong> you accept our <a href="terms.html" target="_blank">Terms of Use </a> and <a href="privacy.html" target="_blank">Privacy Policy</a></p>
+						<button type="submit" class="btn btn-primary">Post</button>
+					{% endbuttons %}
+						
+				
+					<div class="clearfix"></div>
+					</form>
+					</div>
+			</div>
+		</div>	
+	</div>
+	<!-- // Submit Ad -->
+	{% endblock body %}
