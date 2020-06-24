@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  
+
+	<div class="banner text-center">
+	  <div class="container">    
+			<h1>Sell or Advertise   <span class="segment-heading">    anything online </span> with Resale</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+			<a href="post-ad.html">Post Free Ad</a>
+	  </div>
+	</div>
+	<!--single-page-->
+	<div class="single-page main-grid-border">
+		<div class="container">
+			<ol class="breadcrumb" style="margin-bottom: 5px;">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="all-classifieds.html">All Ads</a></li>
+				<li class="active"><a href="mobiles.html">Mobiles</a></li>
+				<li class="active">Mobile Phone</li>
+			</ol>
+			<div class="product-desc">
+				<div class="col-md-7 product-view">
+					<h2>{{ad.name}}</h2>
+					<p> <i class="glyphicon glyphicon-map-marker"></i><a href="#">state</a>, <a href="#">city</a>| Added at {{ad.created_at|time:'g:i a'}} Ad ID: {{ad.code}}</p>
+					<div class="flexslider">
+						<ul class="slides">
+							<li data-thumb="images/ss1.jpg">
+								<img src="images/ss1.jpg" />
+							</li>
+							<li data-thumb="images/ss2.jpg">
+								<img src="images/ss2.jpg" />
+							</li>
+							<li data-thumb="images/ss3.jpg">
+								<img src="images/ss3.jpg" />
+							</li>
+						</ul>
+					</div>
+					<!-- FlexSlider -->
+					  <script defer src="js/jquery.flexslider.js"></script>
+					<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+						<script>
+					// Can also be used with $(document).ready()
+					$(window).load(function() {
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						controlNav: "thumbnails"
+					  });
+					});
+					</script>
+					<!-- //FlexSlider -->
+					<div class="product-details">
+						<h4>Brand : <a href="#">{{ad.brand}}</a></h4>
+						<h4>Views : <strong>150</strong></h4>
+						<p><strong>Summary</strong> 
+							{{ad.content}}
+						</p>
+					
+					</div>
+				</div>
+				<div class="col-md-5 product-details-grid">
+					<div class="item-price">
+						<div class="product-price">
+							<p class="p-price">Price</p>
+							<h3 class="rate">$ {{ad.price}}</h3>
+							<div class="clearfix"></div>
+						</div>
+						<div class="condition">
+							<p class="p-price">Condition</p>
+							<h4>{{ad.condition}}</h4>
+							<div class="clearfix"></div>
+						</div>
+						<div class="itemtype">
+							<p class="p-price">Item Type</p>
+							<h4>{{ad.category}}</h4>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="interested text-center">
+						<h4>Interested in this Ad?<small> Contact the Seller!</small></h4>
+						<p><i class="glyphicon glyphicon-earphone"></i>00-85-9875462655</p>
+					</div>
+				</div>
+			<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--//single-page-->
+	{% endblock body %}

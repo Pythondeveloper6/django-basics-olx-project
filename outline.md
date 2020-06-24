@@ -20,3 +20,14 @@ Features :
     - contact
     - user accounts 
     - place ad
+
+
+
+   ------------------
+   - ad : 
+      - owner city 
+      - datetime : dayes ago
+      - image
+      - ad brand
+      - ad views 
+      - ad condition

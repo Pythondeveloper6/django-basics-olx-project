@@ -552,10 +552,10 @@
 													<section class="list-left">
 														<h5 class="title"> {{ad.name}}</h5>
 														<span class="adprice">${{ad.price}}</span>
-														<p class="catpath">Mobile Phones » Brand</p>
+														<p class="catpath">Mobile Phones » {{ad.category}}</p>
 													</section>
 													<section class="list-right">
-														<span class="date">Today, 17:55</span>
+														<span class="date">Today, {{ad.created_at|time:'G:i'}}</span>
 														<span class="cityname">City name</span>
 													</section>
 													<div class="clearfix"></div>
