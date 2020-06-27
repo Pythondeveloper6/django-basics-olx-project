@@ -1,0 +1,27 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jun 24 2020 20:46:20 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* ad/admin.py
+* ad/models.py
+* ad/templates/ad/all-ads.html
+* ad/templates/ad/all-category.html
+* ad/templates/ad/category_ads.html
+* ad/urls.py
+* ad/views.py
+* outline.md
+* templates/base.html
+
+
+Created files:
+* .autogit/logs/log-17-5-2020-21-0-47.txt
+* ad/migrations/0005_auto_20200617_2120.py
+* ad/migrations/0006_auto_20200617_2121.py
+* ad/templates/ad/single.html
+
+
+Deleted files:
+
+
+Renamed files:
