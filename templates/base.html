@@ -79,12 +79,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header">
 		<div class="container">
 			<div class="logo">
-				<a href="index.html"><span>Re</span>sale</a>
+				<a href="/"><span>Re</span>sale</a>
 			</div>
 			<div class="header-right">
 				
 				{% if user.is_authenticated %}
-					<a class="account" href="login.html">My Profile</a>
+					<a class="account" href="{% url 'accounts:profile' %}">My Profile</a>
 				{% else %}
 				  <a class="account" href="{% url 'login' %}">Login </a>
 				  <a class="account" href="{% url 'accounts:signup' %}">Signup </a>

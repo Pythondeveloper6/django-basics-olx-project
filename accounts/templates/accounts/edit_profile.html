@@ -1,13 +1,26 @@
-<h2>edit profile</h2>
+{% extends "base.html" %}
 
+{% load bootstrap4 %}
+{% block body %}
 
+<!-- Submit Ad -->
+<div class="submit-ad main-grid-border">
+    <div class="container">
+        <h2 class="head">Edit Profile</h2>
+        <div class="post-ad-form">
+            <form method="post"">
+                {% csrf_token %}
+                {% bootstrap_form userform %}
+                {% bootstrap_form edit_profile %}
+                {% buttons %}
+                <button type="submit" class="btn btn-primary ">Save Changes</button>
+                {% endbuttons %}
+                <div class="clearfix"></div>
+            </form>
 
-
-<form method="POST">
-    {% csrf_token %}
-    {{userform}}
-    <br>
-    {{edit_profile}}
-    <br>
-    <input type="submit" value='edit profile'>
-</form>
+        </div>
+    </div>
+</div>
+</div>
+<!-- // Submit Ad -->
+{% endblock body %}

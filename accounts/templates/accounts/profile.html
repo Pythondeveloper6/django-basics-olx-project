@@ -1,7 +1,21 @@
-<h2>test user</h2>
+{% extends "base.html" %}
 
+{% block body %}
 
-{{profile}}
-
-<br>
-{{profile.user.email}}
+<!-- Submit Ad -->
+<div class="submit-ad main-grid-border">
+    <div class="container">
+        <h2 class="head">Your Profile</h2>
+        <div class="post-ad-form">
+            <h3>{{profile}}</h3>
+            <div>
+                <a href="{% url 'accounts:profile_edit' %}"> Edit Profile</a>
+                <a href="{% url 'password_change' %}"> Change Password</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- // Submit Ad -->
+{% endblock body %}
+-------------
