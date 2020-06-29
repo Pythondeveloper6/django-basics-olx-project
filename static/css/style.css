@@ -3011,7 +3011,7 @@ ul.privacy-start {
 }
 .post-ad-form input[type="text"] {
     padding: 10px 10px 10px 10px;
-    width: 70%;
+    /* width: 70%; */
     margin-bottom: 25px;
     border: 1px solid #01a185;
     outline: none;

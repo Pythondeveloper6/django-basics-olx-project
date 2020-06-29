@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load bootstrap4 %}
+{% block body %}
+
+<!-- Submit Ad -->
+<div class="submit-ad main-grid-border">
+    <div class="container">
+        <h2 class="head">Login Now</h2>
+        <div class="post-ad-form">
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% buttons %}
+                <button type="submit" class="btn btn-primary ">Login</button>
+                {% endbuttons %}
+                <div class="clearfix"></div>
+                <input type="hidden" name="next" value="{{ next }}" />
+            </form>
+
+            {# Assumes you setup the password_reset view in your URLconf #}
+            <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- // Submit Ad -->
+{% endblock body %}
+-------------

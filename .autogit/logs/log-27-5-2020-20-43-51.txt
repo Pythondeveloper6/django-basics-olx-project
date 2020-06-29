@@ -1,0 +1,28 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jun 27 2020 20:43:51 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/admin.py
+* accounts/models.py
+* accounts/views.py
+* ad/templates/ad/all-ads.html
+* ad/templates/ad/category_ads.html
+* project/settings.py
+* project/urls.py
+
+
+Created files:
+* .autogit/logs/log-24-5-2020-20-46-20.txt
+* accounts/forms.py
+* accounts/migrations/0001_initial.py
+* accounts/templates/registeration/signup.html
+* accounts/urls.py
+* ad/context_processor.py
+* templates/main_category_nav.html
+
+
+Deleted files:
+
+
+Renamed files:
