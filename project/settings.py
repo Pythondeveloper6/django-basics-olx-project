@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'contact',
     'ad',
     'bootstrap4',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
