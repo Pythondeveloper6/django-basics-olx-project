@@ -12,6 +12,10 @@ def all_ads(request):
     return render(request,'ad/all-ads.html',{'ads':all_Ads})
 
 
+# class Adlist(ListView , CreateView):
+#     model = Ad
+#     template_name = 'ad/all-ads.html'
+
 
 def single_ad(request,id):
     ad = Ad.objects.get(id=id)
