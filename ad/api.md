@@ -34,3 +34,12 @@ Rest Frameword :
             ad/add
             ad/edit
             ad/delete
+
+
+
+
+api [url]-----> APi docs : 
+            - all url :
+                - auth : token 
+                - auth : user , pass
+                - http method

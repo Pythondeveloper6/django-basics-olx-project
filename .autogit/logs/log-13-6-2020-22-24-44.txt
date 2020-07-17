@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jul 13 2020 22:24:44 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* ad/api.py
+* ad/urls.py
+* ad/views.py
+
+
+Created files:
+* .autogit/logs/log-13-6-2020-21-54-33.txt
+* ad/api.md
+
+
+Deleted files:
+
+
+Renamed files:
