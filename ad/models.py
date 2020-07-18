@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 AD_CONDITION = (
     ('New','New'),
-    ('Like New','LikeNew'),
+    ('i','LikeNew'),
     ('Good Condition','GoodCondition'),
     ('Bad Condition','BadCondition'),
 )

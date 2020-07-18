@@ -17,4 +17,6 @@ urlpatterns = [
 
     path('api/v2',api.AdListView.as_view() ,name='api_ad_list'),
     path('api/v2/<int:pk>',api.AdDetailView.as_view() ,name='api_ad_list'),
+    path('api/v2/category',api.CategoryListView.as_view() ,name='api_category_list'),
+    path('api/v2/category/<int:id>/ads',api.CategoryAdsListView.as_view() ,name='api_category_ads_list'),
 ]

@@ -1,9 +1,10 @@
 ### like view  : api view
-from .models import Ad
-from .serializers import AdSerilizer
+from .models import Ad , Category , Brand , AdImages
+from .serializers import AdSerilizer , CategorySerilizer , BrandSerilizer , AdImagesSerilizer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import generics
+from django.shortcuts import get_object_or_404
 
 
 @api_view(['GET'])
@@ -29,3 +30,23 @@ class AdListView(generics.ListCreateAPIView):
 class AdDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Ad.objects.all()
     serializer_class = AdSerilizer
+
+
+
+
+class CategoryListView(generics.ListAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerilizer
+
+
+class CategoryAdsListView(generics.RetrieveAPIView):
+    
+    # def get_queryset(self,id):
+    #     category = get_object_or_404(Category,id=id)
+    #     category_ads = Ad.objects.filter(category=category)
+    #     return category_ads
+    def get_object(self):
+        category = super().get_object()
+        
+
+

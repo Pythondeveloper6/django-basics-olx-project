@@ -43,3 +43,13 @@ api [url]-----> APi docs :
                 - auth : token 
                 - auth : user , pass
                 - http method
+
+
+
+swaeger : api docs
+
+
+------------------------
+
+ python ----> post on fb 
+              comment 
