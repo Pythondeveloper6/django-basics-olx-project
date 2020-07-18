@@ -1,0 +1,27 @@
+db ----- frontend ---- security 
+
+website : js framework :
+    - angular 
+    - react 
+    - vue 
+    - jquery 
+    - ajax
+    - react native 
+    - ionic 
+    - flutter 
+
+
+souq [ website  - dashboard ] [django]--> API [ mobile app ] [json]
+
+
+ - soap 
+ - Rest Api [ Strcutre ]
+ - Graph Ql 
+
+
+
+ steps : 
+  - install rest 
+  - add INSTALLED_APPS
+  - URL 
+  - Config

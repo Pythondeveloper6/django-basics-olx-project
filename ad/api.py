@@ -40,13 +40,22 @@ class CategoryListView(generics.ListAPIView):
 
 
 class CategoryAdsListView(generics.RetrieveAPIView):
-    
-    # def get_queryset(self,id):
-    #     category = get_object_or_404(Category,id=id)
+    queryset = Category.objects.all()
+    serializer_class = AdSerilizer
+
+    def get_queryset(self):
+        category = get_object_or_404(Category,id=self.kwargs['pk'])
+        category_ads = Ad.objects.filter(category=category)
+        return category_ads
+
+    # def get_object(self):
+    #     category = super().get_object()
     #     category_ads = Ad.objects.filter(category=category)
     #     return category_ads
-    def get_object(self):
-        category = super().get_object()
-        
+    #          10   [2,3,4,5,6]
+    # def sum(*args,**kwargs):
+    #     pass
+
+    # sum(10,2,3,4,5,6)
 
 
