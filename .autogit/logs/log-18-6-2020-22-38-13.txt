@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jul 18 2020 22:38:13 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/urls.py
+* ad/api.py
+* ad/urls.py
+
+
+Created files:
+* .autogit/logs/log-18-6-2020-22-8-1.txt
+* accounts/api.py
+* accounts/serializers.py
+* "ad/db ----- frontend ---- security"
+
+
+Deleted files:
+
+
+Renamed files:
