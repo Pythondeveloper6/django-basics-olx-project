@@ -40,7 +40,7 @@
 									<ul>
 										
 										{% for sub_category in category.maincategory.all %}
-											<li><a href="mobiles.html">{{sub_category}}</a></li>
+											<li><a href="{% url 'ads:category_ads' sub_category.id %}">{{sub_category}}</a></li>
 										{% endfor %}
 
 										<div class="clearfix"></div>

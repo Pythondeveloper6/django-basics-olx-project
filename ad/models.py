@@ -50,6 +50,7 @@ class AdImages(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=50)
     main_category = models.ForeignKey('self', limit_choices_to={'main_category':None},related_name='maincategory', on_delete=models.CASCADE , blank=True, null=True)
+    image = models.CharField(max_length=20)
 
     ## relation sub category 
 
