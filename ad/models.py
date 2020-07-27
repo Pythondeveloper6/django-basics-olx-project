@@ -25,7 +25,7 @@ class Ad(models.Model):
     condition = models.CharField(max_length=15,choices=AD_CONDITION,blank=True, null=True)
     brand = models.ForeignKey('Brand', related_name='ad_brand',blank=True, null=True, on_delete=models.CASCADE)
     views_count = models.IntegerField(default=0)
-
+    trending = models.BooleanField(default=False)
 
 
     def save(self, *args, **kwargs): 

@@ -6,25 +6,27 @@
 	  <div class="container">    
 			<h1>Sell or Advertise   <span class="segment-heading">    anything online </span> with Resale</h1>
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-			<a href="post-ad.html">Post Free Ad</a>
+			<a href="{% url 'ads:add_add' %}">Post Free Ad</a>
 	  </div>
 	</div>
 		<!-- content-starts-here -->
 		<div class="content">
 			<div class="categories">
 				<div class="container">
-					
-					<div class="col-md-2 focus-grid">
-						<a href="categories.html">
-							<div class="focus-border">
-								<div class="focus-layout">
-									<div class="focus-image"><i class="fa fa-mobile"></i></div>
-									<h4 class="clrchg">Mobiles</h4>
-								</div>
-							</div>
-						</a>
-					</div>
 
+					
+					{% for category in all_category  %}		
+						<div class="col-md-2 focus-grid">
+							<a href="{% url 'ads:category_ads' category.id %}">
+								<div class="focus-border">
+									<div class="focus-layout">
+										<div class="focus-image"><i class="{{category.image}}"></i></div>
+										<h4 class="clrchg">{{category}}</h4>
+									</div>
+								</div>
+							</a>
+						</div>
+					{% endfor %}
 					<div class="clearfix"></div>
 				</div>
 			</div>
@@ -35,131 +37,21 @@
 					<h2>Trending Ads</h2>
 							<ul id="flexiselDemo3">
 								<li>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p1.jpg"/>
-											<span class="price">&#36; 450</span>
-										</a> 
-										<div class="ad-info">
-											<h5>There are many variations of passages</h5>
-											<span>1 hour ago</span>
+									
+									{% for ad in trending_ads %}	
+										<div class="col-md-3 biseller-column">
+											<a href="single.html">
+												<img src="{{ad.image.url}}"/>
+												<span class="price">&#36; {{ad.price}}</span>
+											</a> 
+											<div class="ad-info">
+												<h5>{{ad.name}}</h5>
+												<span>1 hour ago</span>
+											</div>
 										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p2.jpg"/>
-											<span class="price">&#36; 399</span>
-										</a> 
-										<div class="ad-info">
-											<h5>Lorem Ipsum is simply dummy</h5>
-											<span>3 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p3.jpg"/>
-											<span class="price">&#36; 199</span>
-										</a> 
-										<div class="ad-info">
-											<h5>It is a long established fact that a reader</h5>
-											<span>8 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p4.jpg"/>
-											<span class="price">&#36; 159</span>
-										</a> 
-										<div class="ad-info">
-											<h5>passage of Lorem Ipsum you need to be</h5>
-											<span>19 hour ago</span>
-										</div>
-									</div>
+									{% endfor %}
 								</li>
-								<li>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p5.jpg"/>
-											<span class="price">&#36; 1599</span>
-										</a> 
-										<div class="ad-info">
-											<h5>There are many variations of passages</h5>
-											<span>1 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p6.jpg"/>
-											<span class="price">&#36; 1099</span>
-										</a> 
-										<div class="ad-info">
-											<h5>passage of Lorem Ipsum you need to be</h5>
-											<span>1 day ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p7.jpg"/>
-											<span class="price">&#36; 109</span>
-										</a> 
-										<div class="ad-info">
-											<h5>It is a long established fact that a reader</h5>
-											<span>9 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p8.jpg"/>
-											<span class="price">&#36; 189</span>
-										</a> 
-										<div class="ad-info">
-											<h5>Lorem Ipsum is simply dummy</h5>
-											<span>3 hour ago</span>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p9.jpg"/>
-											<span class="price">&#36; 2599</span>
-										</a> 
-										<div class="ad-info">
-											<h5>Lorem Ipsum is simply dummy</h5>
-											<span>3 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p10.jpg"/>
-											<span class="price">&#36; 3999</span>
-										</a> 
-										<div class="ad-info">
-											<h5>It is a long established fact that a reader</h5>
-											<span>9 hour ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p11.jpg"/>
-											<span class="price">&#36; 2699</span>
-										</a> 
-										<div class="ad-info">
-											<h5>passage of Lorem Ipsum you need to be</h5>
-											<span>1 day ago</span>
-										</div>
-									</div>
-									<div class="col-md-3 biseller-column">
-										<a href="single.html">
-											<img src="images/p12.jpg"/>
-											<span class="price">&#36; 899</span>
-										</a> 
-										<div class="ad-info">
-											<h5>There are many variations of passages</h5>
-											<span>1 hour ago</span>
-										</div>
-									</div>
-								</li>
+
 						</ul>
 					<script type="text/javascript">
 						 $(window).load(function() {

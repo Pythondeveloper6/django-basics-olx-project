@@ -1,4 +1,4 @@
- - home 
  - deploy 
  - admin customization 
- - contact form 
+ - contact form [gmail]
+ - footer
