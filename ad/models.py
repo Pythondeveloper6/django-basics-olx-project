@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.utils import timezone
 # Create your models here.
 
 AD_CONDITION = (
@@ -26,7 +26,7 @@ class Ad(models.Model):
     brand = models.ForeignKey('Brand', related_name='ad_brand',blank=True, null=True, on_delete=models.CASCADE)
     views_count = models.IntegerField(default=0)
     trending = models.BooleanField(default=False)
-
+    liked_users = models.ManyToManyField(User, blank=True, null=True)
 
     def save(self, *args, **kwargs): 
         ## logic
@@ -36,6 +36,23 @@ class Ad(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+class Comment(models.Model):
+    author = models.ForeignKey(User, related_name='comment_author', on_delete=models.CASCADE)
+    ad = models.ForeignKey(Ad, related_name='comment_product', on_delete=models.CASCADE)
+    comment = models.TextField(max_length=100)
+    created_at =  models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        verbose_name = ("Comment")
+        verbose_name_plural = ("Comments")
+        ordering = ('-created_at',)
+
+    def __str__(self):
+        return str(self.ad)
+
 
 
 

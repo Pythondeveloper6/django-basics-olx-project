@@ -1,0 +1,24 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jul 27 2020 22:03:31 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* ad/admin.py
+* ad/models.py
+* ad/templates/ad/site_todo.md
+* home/templates/home/home.html
+* home/views.py
+* project/urls.py
+* templates/base.html
+
+
+Created files:
+* .autogit/logs/log-22-6-2020-22-27-45.txt
+* ad/migrations/0009_ad_trending.py
+* media/ad/intro.jpg
+
+
+Deleted files:
+
+
+Renamed files:

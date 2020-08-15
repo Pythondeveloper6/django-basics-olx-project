@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
-from .forms import AdForm
-from .models import Ad , Category
+from .forms import AdForm , CommentForm
+from .models import Ad , Category , Comment
 # Create your views here.
 
 
@@ -19,7 +19,20 @@ def all_ads(request):
 
 def single_ad(request,id):
     ad = Ad.objects.get(id=id)
-    return render(request,'ad/single.html',{'ad':ad})
+    comments = Comment.objects.filter(ad=ad)
+
+
+    if request.method == 'POST': ## save
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            myform = form.save(commit=False)
+            myform.author = request.user
+            myform.ad = ad
+            myform.save()
+    else:
+        form = CommentForm()
+
+    return render(request,'ad/single.html',{'ad':ad , 'comments' : comments , 'form':form})
 
 
 def all_categories(request):
@@ -47,3 +60,8 @@ def add_ad(request):
         form = AdForm()
 
     return render(request,'ad/post-ad.html',{'form':form})
+
+
+
+def like_ad(request,id):
+    pass

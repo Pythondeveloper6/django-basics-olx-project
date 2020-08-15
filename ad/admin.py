@@ -1,9 +1,8 @@
 from django.contrib import admin
-
 # Register your models here.
 
 
-from .models import Ad , Category , AdImages , Brand
+from .models import Ad , Category , AdImages , Brand , Comment
 
 
 class AdAdmin(admin.ModelAdmin):
@@ -20,3 +19,4 @@ admin.site.register(Ad , AdAdmin)
 admin.site.register(Category)
 admin.site.register(AdImages)
 admin.site.register(Brand)
+admin.site.register(Comment)

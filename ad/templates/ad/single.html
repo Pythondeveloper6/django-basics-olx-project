@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load bootstrap4 %}
 {% block body %}
   
 
@@ -57,7 +57,9 @@
 							{{ad.content}}
 						</p>
 					
+						<a href="{% url '' %}"> Like </a>
 					</div>
+
 				</div>
 				<div class="col-md-5 product-details-grid">
 					<div class="item-price">
@@ -83,6 +85,34 @@
 					</div>
 				</div>
 			<div class="clearfix"></div>
+			</div>
+			<div class="row">
+				<h2> Comments </h2>
+				<div>
+					
+					{% if user.is_authenticated %}
+						<h3> add new comment </h3>
+						<form  method="post" class="form">
+							{% csrf_token %}
+							{% bootstrap_form form %}
+							{% buttons %}
+								<button type="submit" class="btn btn-success">Add Comment</button>
+							{% endbuttons %}
+						</form>
+					{% else %}
+					<a href="#">Login To Add comment </a>
+					{% endif %}
+						
+
+				</div>
+				{% for comment in comments %}
+					<div class="col-md-8">
+						<h2> {{comment.author}}</h2>
+						<p> {{comment.comment}}</p>
+						<p>{{comment.created_at}}</p>
+						<hr>
+					</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
