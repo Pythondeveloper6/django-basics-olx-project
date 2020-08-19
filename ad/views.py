@@ -1,6 +1,7 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render , redirect
 from .forms import AdForm , CommentForm
 from .models import Ad , Category , Comment
+from django.urls import reverse
 # Create your views here.
 
 
@@ -64,4 +65,11 @@ def add_ad(request):
 
 
 def like_ad(request,id):
-    pass
+    ad = Ad.objects.get(id=id)
+    
+    if request.user in ad.liked_users.all():
+        ad.liked_users.remove(request.user)
+    else:
+        ad.liked_users.add(request.user)
+
+    return redirect(reverse('ads:single_ad',kwargs={'id':ad.id}))

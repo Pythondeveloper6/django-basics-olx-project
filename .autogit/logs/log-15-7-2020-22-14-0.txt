@@ -1,0 +1,30 @@
+-------------------- Auto-Git Log --------------------
+		Sat Aug 15 2020 22:14:00 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* ad/admin.py
+* ad/forms.py
+* ad/models.py
+* ad/templates/ad/single.html
+* ad/templates/ad/site_todo.md
+* ad/urls.py
+* ad/views.py
+* home/admin.py
+* home/models.py
+* project/settings.py
+* templates/base.html
+
+
+Created files:
+* .autogit/logs/log-27-6-2020-22-3-31.txt
+* ad/migrations/0010_comment.py
+* ad/migrations/0011_auto_20200815_2211.py
+* home/footer_context_processor.py
+* home/migrations/0001_initial.py
+
+
+Deleted files:
+
+
+Renamed files:

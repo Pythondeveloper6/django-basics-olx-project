@@ -56,8 +56,15 @@
 						<p><strong>Summary</strong> 
 							{{ad.content}}
 						</p>
-					
-						<a href="{% url '' %}"> Like </a>
+						
+
+						{% if user in ad.liked_users.all %}
+							<a href="{% url 'ads:like_ad' ad.id %}"> Dislike </a>
+						{% else %}
+							<a href="{% url 'ads:like_ad' ad.id %}"> Like </a>
+						{% endif %}
+							
+						
 					</div>
 
 				</div>
