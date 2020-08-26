@@ -150,6 +150,14 @@ LOGIN_REDIRECT_URL = '/accounts/profile'
 
 
 
+EMAIL_BACKEND = 
+EMAIL_HOST =
+EMAIL_HOST_USER=
+EMAIL_HOST_PASSWORD=
+EMAIL_PORT=
+
+
+
 #### deploy
 # ALLOWED_HOSTS = ['192.241.152.11', 'codewithmaati.com']
 # STATIC_URL = '/static/'

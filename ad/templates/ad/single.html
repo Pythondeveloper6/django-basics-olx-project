@@ -131,6 +131,22 @@
 	<script>
 		// Render the PayPal button into #paypal-button-container
 
+		function getCookie(name) {
+			let cookieValue = null;
+			if (document.cookie && document.cookie !== '') {
+			  const cookies = document.cookie.split(';');
+			  for (let i = 0; i < cookies.length; i++) {
+				const cookie = cookies[i].trim();
+				// Does this cookie string begin with the name we want?
+				if (cookie.substring(0, name.length + 1) === (name + '=')) {
+				  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+				  break;
+				}
+			  }
+			}
+			return cookieValue;
+		  }
+		  const csrftoken = getCookie('csrftoken');
 
 		function completeorder(){
 			var url = "{% url 'ads:add_order' %}"
@@ -139,11 +155,10 @@
 				method: 'POST',
 				headers: {
 					'Content-type':'apllication/json',
-					'X-CSRFTocken':csrftoken ,
+					'X-CSRFToken':csrftoken ,
 				},
-				body:JSON.stringfy({
+				body:JSON.stringify({
 					'id' : {{ad.id}} ,
-					'price' : {{ad.price}}
 				})
 			})
 		}

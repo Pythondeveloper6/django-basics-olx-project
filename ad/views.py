@@ -1,8 +1,9 @@
 from django.shortcuts import get_object_or_404, render , redirect
 from .forms import AdForm , CommentForm
-from .models import Ad , Category , Comment
+from .models import Ad , Category , Comment , Order
 from django.urls import reverse
 import json
+from django.http import JsonResponse
 # Create your views here.
 
 
@@ -80,4 +81,13 @@ def like_ad(request,id):
 
 def add_order(request):
     body = json.loads(request.body)
-    print(body)
+    ad = get_object_or_404(Ad,id=body['id'])
+
+
+    Order.objects.create(
+        user = request.user,
+        ad = ad , 
+        price = ad.price
+    )
+    return JsonResponse('order completed',safe=False)
+

@@ -27,6 +27,7 @@ urlpatterns = [
     path('blog/', include('blog.urls',namespace='blog')),
     path('', include('home.urls',namespace='home')),
     path('ads/', include('ad.urls',namespace='ads')),
+    path('contact/', include('contact.urls',namespace='contact')),
     path('api-auth/', include('rest_framework.urls')),
 ]
 

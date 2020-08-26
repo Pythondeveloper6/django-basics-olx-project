@@ -96,4 +96,4 @@ class Order(models.Model):
         verbose_name_plural = ("Orders")
 
     def __str__(self):
-        return self.naadme
+        return str(self.ad)

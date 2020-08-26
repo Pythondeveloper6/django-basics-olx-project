@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Wed Aug 26 2020 22:10:30 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* ad/admin.py
+* ad/models.py
+* ad/templates/ad/category_ads.html
+* ad/templates/ad/single.html
+* ad/urls.py
+* ad/views.py
+* project/settings.py
+
+
+Created files:
+* .autogit/logs/log-19-7-2020-22-11-2.txt
+* ad/migrations/0012_order.py
+
+
+Deleted files:
+
+
+Renamed files:

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block body %}
+  
+
+	<div class="banner text-center">
+	  <div class="container">    
+			<h1>Sell or Advertise   <span class="segment-heading">    anything online </span> with Resale</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+			<a href="post-ad.html">Post Free Ad</a>
+	  </div>
+	</div>
+	<!--single-page-->
+	<div class="single-page main-grid-border">
+		<div class="container">
+
+			<div class="product-desc">
+				<div class="col-md-8 mx-auto product-view">
+
+                    <form method="POST">
+                        <label for="fname">Name:</label><br>
+                        <input type="text" id="name" name="fname" value="John"><br>
+                        <label for="lname">Email:</label><br>
+                        <input type="email" id="email" name="lname" value="Doe"><br><br>
+                        <label for="lname">Message:</label><br>
+                        <input type="text" id="message" name="lname" value="Doe">
+                        <input type="submit" value="Send Mail">
+                      </form> 
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--//single-page-->
+
+
+
+	{% endblock body %}
