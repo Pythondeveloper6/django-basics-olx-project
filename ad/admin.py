@@ -2,7 +2,7 @@ from django.contrib import admin
 # Register your models here.
 
 
-from .models import Ad , Category , AdImages , Brand , Comment
+from .models import Ad , Category , AdImages , Brand , Comment , Order
 
 
 class AdAdmin(admin.ModelAdmin):
@@ -20,3 +20,4 @@ admin.site.register(Category)
 admin.site.register(AdImages)
 admin.site.register(Brand)
 admin.site.register(Comment)
+admin.site.register(Order)

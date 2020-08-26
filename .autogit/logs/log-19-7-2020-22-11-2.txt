@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Wed Aug 19 2020 22:11:02 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* project/settings.py
+
+
+Created files:
+* req.txt
+
+
+Deleted files:
+
+
+Renamed files:

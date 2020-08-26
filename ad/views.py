@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render , redirect
 from .forms import AdForm , CommentForm
 from .models import Ad , Category , Comment
 from django.urls import reverse
+import json
 # Create your views here.
 
 
@@ -73,3 +74,10 @@ def like_ad(request,id):
         ad.liked_users.add(request.user)
 
     return redirect(reverse('ads:single_ad',kwargs={'id':ad.id}))
+
+
+
+
+def add_order(request):
+    body = json.loads(request.body)
+    print(body)

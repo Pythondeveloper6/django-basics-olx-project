@@ -73,6 +73,7 @@
 						<div class="product-price">
 							<p class="p-price">Price</p>
 							<h3 class="rate">$ {{ad.price}}</h3>
+							
 							<div class="clearfix"></div>
 						</div>
 						<div class="condition">
@@ -87,8 +88,7 @@
 						</div>
 					</div>
 					<div class="interested text-center">
-						<h4>Interested in this Ad?<small> Contact the Seller!</small></h4>
-						<p><i class="glyphicon glyphicon-earphone"></i>00-85-9875462655</p>
+						<div id="paypal-button-container"></div>
 					</div>
 				</div>
 			<div class="clearfix"></div>
@@ -124,4 +124,57 @@
 		</div>
 	</div>
 	<!--//single-page-->
+
+
+	<script src="https://www.paypal.com/sdk/js?client-id=AefqEnZls0oI3BIUij4QskV2UmAoWmjoH6LwKhIv5aLGudl4lWXD-T6KWLMPAcHxdpOQ_1khkf7Pc2X_&currency=USD"></script>
+
+	<script>
+		// Render the PayPal button into #paypal-button-container
+
+
+		function completeorder(){
+			var url = "{% url 'ads:add_order' %}"
+
+			fetch(url,{
+				method: 'POST',
+				headers: {
+					'Content-type':'apllication/json',
+					'X-CSRFTocken':csrftoken ,
+				},
+				body:JSON.stringfy({
+					'id' : {{ad.id}} ,
+					'price' : {{ad.price}}
+				})
+			})
+		}
+
+		paypal.Buttons({
+	
+			// Set up the transaction
+			createOrder: function(data, actions) {
+				return actions.order.create({
+					purchase_units: [{
+						amount: {
+							value: '{{ad.price}}'
+						}
+					}]
+				});
+			},
+
+
+	
+			// Finalize the transaction
+			onApprove: function(data, actions) {
+				return actions.order.capture().then(function(details) {
+					// Show a success message to the buyer
+					completeorder()
+					alert('Transaction completed by ' + details.payer.name.given_name + '!');
+				});
+			}
+	
+	
+		}).render('#paypal-button-container');
+	</script>
+	
+
 	{% endblock body %}

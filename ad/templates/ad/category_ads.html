@@ -155,12 +155,13 @@
 										<div class="clearfix"></div>
 										<ul class="list">
 											{% for ad in category_ads %}
-											<a href="single.html">
+											<a href="{% url 'ads:single_ad' ad.id %}">
 												<li>
 													<img src="{{ad.image.url}}" title="" alt="" />
 													<section class="list-left">
 														<h5 class="title"> {{ad.name}}</h5>
 														<span class="adprice">${{ad.price}}</span>
+														
 														<p class="catpath">Mobile Phones » {{ad.category}}</p>
 													</section>
 													<section class="list-right">
@@ -197,5 +198,7 @@
 	</div>
 </div>
 <!-- // Products -->
+
+
 
 {% endblock body %}

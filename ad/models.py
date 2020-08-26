@@ -80,3 +80,20 @@ class Brand(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+
+class Order(models.Model):
+    user = models.ForeignKey(User,related_name='order_owner', on_delete=models.CASCADE)
+    ad = models.ForeignKey(Ad, related_name='order_product', on_delete=models.CASCADE)
+    price = models.IntegerField(default=0)
+    created_at = models.DateTimeField(default=timezone.now)
+    
+
+    class Meta:
+        verbose_name = ("Order")
+        verbose_name_plural = ("Orders")
+
+    def __str__(self):
+        return self.naadme
