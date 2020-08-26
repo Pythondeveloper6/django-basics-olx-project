@@ -18,12 +18,15 @@
 				<div class="col-md-8 mx-auto product-view">
 
                     <form method="POST">
+                        {% csrf_token %}
+                        <label for="fname">Subject:</label><br>
+                        <input type="text" id="subject" name="subject" value="John"><br>
                         <label for="fname">Name:</label><br>
-                        <input type="text" id="name" name="fname" value="John"><br>
+                        <input type="text" id="name" name="name" value="John"><br>
                         <label for="lname">Email:</label><br>
-                        <input type="email" id="email" name="lname" value="Doe"><br><br>
+                        <input type="email" id="email" name="email" value="Doe"><br><br>
                         <label for="lname">Message:</label><br>
-                        <input type="text" id="message" name="lname" value="Doe">
+                        <input type="text" id="message" name="message" value="Doe">
                         <input type="submit" value="Send Mail">
                       </form> 
 

@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Wed Aug 26 2020 22:40:42 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* ad/models.py
+* ad/templates/ad/single.html
+* ad/views.py
+* contact/views.py
+* project/settings.py
+* project/urls.py
+
+
+Created files:
+* .autogit/logs/log-26-7-2020-22-10-30.txt
+* contact/templates/contact/contact.html
+* contact/urls.py
+
+
+Deleted files:
+
+
+Renamed files:
